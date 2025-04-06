@@ -2,32 +2,81 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Help Automação</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #0e4d92;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .slogan {
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .tab-content {
+      display: none;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-   
     <h1>Help Automação</h1>
     <p class="slogan">Sua casa na palma da mão!</p>
   </header>
 
   <nav>
-    <a href="index.html">Início</a>
-    
-    <a href="contato.html">Fale Conosco</a>
+    <a onclick="showTab('sobre')">Sobre</a>
+    <a onclick="showTab('servicos')">Serviços</a>
+    <a onclick="showTab('contato')">Contato</a>
   </nav>
 
   <main>
-    <section class="sobre">
+    <section id="sobre" class="tab-content active">
       <h2>Sobre Nós</h2>
-      <p>
-        A <strong>Help Automação</strong> oferece soluções completas em automação residencial e elétrica. Nosso compromisso é transformar sua casa ou negócio em um ambiente moderno, seguro e inteligente.
-      </p>
+      <p>A <strong>Help Automação</strong> oferece soluções completas em automação residencial e elétrica. Nosso compromisso é transformar sua casa ou negócio em um ambiente moderno, seguro e inteligente.</p>
     </section>
 
-    <section class="servicos">
+    <section id="servicos" class="tab-content">
       <h2>Nossos Serviços</h2>
       <ul>
         <li>Automação residencial</li>
@@ -39,7 +88,7 @@
       </ul>
     </section>
 
-    <section class="contato">
+    <section id="contato" class="tab-content">
       <h2>Contato</h2>
       <p><strong>WhatsApp:</strong> <a href="https://wa.me/5538998134244">38-99813-4244</a></p>
       <p><strong>E-mail:</strong> <a href="mailto:helpautomacaoserv@gmail.com">helpautomacaoserv@gmail.com</a></p>
@@ -51,5 +100,16 @@
   <footer>
     <p>&copy; 2025 Help Automação - Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+   tabs.forEach(function(tab) {
+  tab.classList.remove('active');
+});
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
 </body>
 </html>

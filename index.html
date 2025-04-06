@@ -1,84 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contato - Help Automação</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Automação - Sua casa na palma da mão!</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
       margin: 0;
       padding: 0;
+      background-color: #f9f9f9;
     }
-
-    .container {
-      max-width: 600px;
-      margin: 60px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h1 {
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px;
       text-align: center;
+    }
+    section {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
       color: #1e90ff;
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
+    ul {
+      line-height: 1.8;
     }
-
-    input, textarea {
-      margin-bottom: 15px;
-      padding: 12px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    button {
+    a.botao {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
       background-color: #1e90ff;
-      color: #fff;
-      padding: 12px;
-      border: none;
+      color: white;
+      text-decoration: none;
       border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
+      transition: background 0.3s;
     }
-
-    button:hover {
+    a.botao:hover {
       background-color: #156fc2;
     }
-
     footer {
       text-align: center;
-      margin-top: 40px;
-      color: #777;
+      padding: 20px;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Fale com a Help Automação</h1>
-    <form action="https://formsubmit.co/helpautomacaoserv@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <input type="text" name="subject" placeholder="Assunto">
-      <textarea name="message" placeholder="Sua mensagem" rows="6" required></textarea>
+  <header>
+    <h1>Help Automação</h1>
+    <p>Sua casa na palma da mão!</p>
+  </header>
 
-      <!-- Configurações -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://hosi3328.github.io/help-automacao/obrigado.html">
+  <section>
+    <h2>Sobre nós</h2>
+    <p>A Help Automação é especializada em soluções modernas para tornar sua casa mais prática, confortável e segura. Atendemos Montes Claros e região com excelência e tecnologia de ponta.</p>
+  </section>
 
-      <button type="submit">Enviar mensagem</button>
-    </form>
-  </div>
+  <section>
+    <h2>Serviços oferecidos</h2>
+    <ul>
+      <li>Automação residencial</li>
+      <li>Instalações elétricas</li>
+      <li>Manutenção preventiva e corretiva</li>
+      <li>Alexa e assistentes virtuais</li>
+      <li>Cortinas e iluminação inteligente</li>
+      <li>Alarmes, fechaduras digitais, motores de portão</li>
+      <li>Interfones e soluções de segurança</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contato</h2>
+    <p><strong>WhatsApp:</strong> (38) 99813-4244</p>
+    <p><strong>Email:</strong> helpautomacaoserv@gmail.com</p>
+    <p><strong>Instagram:</strong> @helberth_hosi</p>
+    <p><strong>Endereço:</strong> Jardim Primavera, Montes Claros - MG</p>
+
+    <a href="formulario.html" class="botao">Fale conosco</a>
+  </section>
 
   <footer>
-    © 2025 Help Automação
+    &copy; 2025 Help Automação. Todos os direitos reservados.
   </footer>
 </body>
 </html>

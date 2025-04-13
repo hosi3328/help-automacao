@@ -1,117 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Help Automação</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help Automação - Sua casa na palma da mão</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
       margin: 0;
-      background-color: #f7f7f7;
-      color: #333;
+      padding: 0;
     }
     header {
-      background-color: #0e4d92;
-      color: white;
+      background-color: #ffcc00;
       padding: 20px;
       text-align: center;
     }
-    .slogan {
-      font-style: italic;
-      font-size: 1.1em;
+    header img {
+      max-width: 200px;
     }
     nav {
-      background-color: #003366;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px 0;
+      background-color: #333;
+      overflow: hidden;
     }
     nav a {
-      color: white;
+      float: left;
+      display: block;
+      color: #ffffff;
+      text-align: center;
+      padding: 14px 16px;
       text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #111;
     }
-    .tab-content {
-      display: none;
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .container {
+      display: flex;
+      margin: 20px;
     }
-    .tab-content.active {
-      display: block;
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+    .highlight {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-left: 5px solid #ffcc00;
+      margin-bottom: 20px;
+    }
+    .highlight h2 {
+      margin-top: 0;
     }
     footer {
-      background-color: #003366;
-      color: white;
+      background-color: #ffcc00;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="galeria/LOGO-REDUZIDO.png" alt="Logo Help Automação" />
     <h1>Help Automação</h1>
-    <p class="slogan">Sua casa na palma da mão!</p>
+    <p><strong>Sua casa na palma da mão!</strong></p>
   </header>
 
-<nav>
-  <a onclick="showTab('sobre')">Sobre</a>
-  <a onclick="showTab('servicos')">Serviços</a>
-  <a onclick="showTab('contato')">Contato</a>
-  <a href="projetos.html">Projetos</a> 
-</nav>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="contato.html">Contato</a>
+  </nav>
 
+  <div class="container">
+    <div class="main-content">
+      <section class="highlight">
+        <h2>Automação Residencial Inteligente</h2>
+        <p>Na Help Automação, transformamos residências em ambientes inteligentes e confortáveis, com soluções modernas de automação de iluminação, cortinas, segurança, áudio, vídeo e muito mais.</p>
+      </section>
 
-  <main>
-    <section id="sobre" class="tab-content active">
-      <h2>Sobre Nós</h2>
-      <p>A <strong>Help Automação</strong> oferece soluções completas em automação residencial e elétrica. Nosso compromisso é transformar sua casa ou negócio em um ambiente moderno, seguro e inteligente.</p>
-    </section>
+      <section class="highlight">
+        <h2>Projetos Realizados</h2>
+        <p>Confira nossos projetos em condomínios, igrejas, comércios e residências. Aplicamos tecnologia de ponta com atenção aos detalhes.</p>
+        <p><a href="projetos.html">Clique aqui para ver os projetos →</a></p>
+      </section>
 
-    <section id="servicos" class="tab-content">
-      <h2>Nossos Serviços</h2>
-      <ul>
-        <li>Automação residencial</li>
-        <li>Instalações elétricas</li>
-        <li>Manutenção preventiva e corretiva</li>
-        <li>Alexa e assistentes virtuais</li>
-        <li>Cortinas e iluminação inteligente</li>
-        <li>Alarmes, fechaduras digitais, motores de portão, interfones</li>
-      </ul>
-    </section>
-
-    <section id="contato" class="tab-content">
-      <h2>Contato</h2>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/5538998134244">38-99813-4244</a></p>
-      <p><strong>E-mail:</strong> <a href="mailto:helpautomacaoserv@gmail.com">helpautomacaoserv@gmail.com</a></p>
-      <p><strong>Instagram:</strong> <a href="https://instagram.com/helberth_hosi" target="_blank">@helpautomacaoserv</a></p>
-      <p><strong>Endereço:</strong> Jardim Primavera, Montes Claros - MG</p>
-    </section>
-  </main>
+      <section class="highlight">
+        <h2>Fale Conosco</h2>
+        <p>Entre em contato para orçamentos, dúvidas ou parcerias. Estamos prontos para ajudar!</p>
+        <p><a href="contato.html">Acesse a página de contato →</a></p>
+      </section>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Help Automação - Todos os direitos reservados.</p>
+    <p>&copy; 2025 Help Automação - Montes Claros, MG</p>
   </footer>
-
-  <script>
-  function showTab(tabId) {
-    const tabs = document.querySelectorAll('.tab-content');
-   tabs.forEach(function(tab) {
-  tab.classList.remove('active');
-});
-    document.getElementById(tabId).classList.add('active');
-  }
-</script>
 
 </body>
 </html>

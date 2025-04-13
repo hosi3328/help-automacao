@@ -3,93 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projetos Realizados - Help Automação</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <title>Help Automação - Projetos Realizados</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
       margin: 0;
-      background-color: #f7f7f7;
-      color: #333;
+      padding: 0;
     }
     header {
-      background-color: #0e4d92;
-      color: white;
+      background-color: #ffcc00;
       padding: 20px;
       text-align: center;
     }
-    .logo {
-      width: 120px;
+    header img {
+      max-width: 200px;
+    }
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: #ffffff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #111;
+    }
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+    .sidebar {
+      width: 25%;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    .content {
+      width: 75%;
+      padding: 20px;
+    }
+    .project {
+      margin-bottom: 40px;
+    }
+    .project h2 {
+      color: #333;
+    }
+    .project img {
+      max-width: 100%;
+      height: auto;
       margin-bottom: 10px;
     }
-    .galeria {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-    .projeto {
-      background: #fff;
-      margin-bottom: 40px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-    .projeto h2 {
-      color: #0e4d92;
-    }
-    .projeto img {
-      max-width: 200px;
-      height: auto;
-      margin: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
     footer {
-      background-color: #003366;
-      color: white;
+      background-color: #ffcc00;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 10px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <a href="index.html">
-      <img src="galeria/LOGO-REDUZIDO.png" alt="Logo Help Automação" class="logo" />
-    </a>
-    <h1>Projetos Realizados</h1>
+    <img src="galeria/LOGO-REDUZIDO.png" alt="Logo Help Automação" />
   </header>
 
-  <main class="galeria">
-    <section class="projeto">
-      <h2>Automação das Piscinas - Condomínio Gran Royale</h2>
-      <img src="galeria/projeto3.jpeg" alt="Painel Gran Royale" />
-      <img src="galeria/projeto3_1.jpeg" alt="Painel Gran Royale 2" />
-      <p>Foram automatizadas as piscinas do clube com montagem de painel de controle para 7 bombas e iluminação LED da piscina.</p>
-    </section>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="contato.html">Contato</a>
+  </nav>
 
-    <section class="projeto">
-      <h2>Iluminação e Projeção - Igreja IDERP</h2>
-      <img src="galeria/projeto4.jpeg" alt="Teto Igreja IDERP" />
-      <img src="galeria/projeto4_1.jpeg" alt="Teto Igreja IDERP 2" />
-      <img src="galeria/projeto4_2.jpeg" alt="Teto Igreja IDERP 3" />
-      <img src="galeria/projeto_3.jpeg" alt="Interruptor inteligente" />
-      <p>Instalação de 24 luminárias LED 48W (620x620 mm), interruptor inteligente de 6 teclas e projetor no teto com conversor/amplificador de vídeo para melhor qualidade de sinal.</p>
-    </section>
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#">Automação Residencial</a></li>
+        <li><a href="#">Iluminação Inteligente</a></li>
+        <li><a href="#">Segurança</a></li>
+      </ul>
+    </aside>
 
-    <section class="projeto">
-      <h2>Automação Residencial - Bairro Carmelo</h2>
-      <img src="galeria/projeto5.jpeg" alt="Residência Carmelo" />
-      <img src="galeria/projeto5_1.jpeg" alt="Cozinha Carmelo" />
-      <img src="galeria/projeto5_2.jpeg" alt="Sala Carmelo" />
-      <img src="galeria/projeto5_3.jpeg" alt="Detalhes Carmelo" />
-      <img src="galeria/projeto5_4.jpeg" alt="Spot Carmelo" />
-      <img src="galeria/projeto5_5.jpeg" alt="Quartos Carmelo" />
-      <img src="galeria/projeto5_6.jpeg" alt="Quadro Carmelo" />
-      <p>Automação completa da residência: iluminação inteligente em toda a casa, tomadas inteligentes na cozinha, quadro geral, sala com LED e spots com interruptores virtuais, 3 quartos com cortinas automáticas, ar-condicionado smart e banheiros com interruptores JWCOM.</p>
-    </section>
+    <main class="content">
+      <section class="project">
+        <h2>Automação das Piscinas - Condomínio Gran Royale</h2>
+        <img src="galeria/projeto3.jpeg" alt="Painel Gran Royale" />
+        <p>Foram automatizadas as piscinas do clube com montagem de painel de controle para 7 bombas e iluminação LED da piscina.</p>
+      </section>
 
-    <section class="projeto">
-      <h2>Manutenção de Painel de LED - RC Comercial</h2>
-      <img src="galeria/projeto1.jpeg" alt="Painel
+      <section class="project">
+        <h2>Iluminação e Projeção - Igreja IDERP</h2>
+        <img src="galeria/projeto4.jpeg" alt="Teto Igreja IDERP" />
+        <p>Instalação de 24 luminárias LED 48W (620x620 mm), interruptor inteligente de 6 teclas e projetor no teto com conversor/amplificador de vídeo para melhor qualidade de sinal.</p>
+      </section>
+
+      <!-- Adicione mais projetos conforme necessário -->
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Help Automação - Montes Claros, MG</p>
+  </footer>
+
+</body>
+</html>

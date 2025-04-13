@@ -2,39 +2,85 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projetos Realizados - Help Automação</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .projeto {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .projeto img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 15px auto;
+    }
+
+    .projeto h2 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    .projeto p {
+      color: #444;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <header>
+
+  <div class="container">
     <h1>Projetos Realizados</h1>
-  </header>
 
-  <main>
-    <section>
+    <div class="projeto">
       <h2>Automação das Piscinas - Condomínio Gran Royale</h2>
-      <img src="galeria/projeto1.jpg" alt="Automação Piscinas Gran Royale">
-      <p>Painel de controle inteligente para as piscinas do clube Gran Royale.</p>
-    </section>
+      <img src="granroyale.jpg" alt="Piscina Gran Royale">
+      <p>Painel de controle inteligente para as piscinas do clube Gran Royale. Automação de 7 bombas, iluminação LED e controle de temporização.</p>
+    </div>
 
-    <section>
+    <div class="projeto">
       <h2>Iluminação e Projeção - Igreja IDERP</h2>
-      <img src="galeria/projeto2.jpg" alt="Igreja IDERP">
-      <p>Instalação de iluminação LED e sistema de projeção de imagens na Igreja IDERP.</p>
-    </section>
+      <img src="iderp.jpg" alt="Iluminação Igreja IDERP">
+      <p>Instalação de 24 luminárias LED no forro da igreja e projetor com conversor de vídeo para projeção durante cultos.</p>
+    </div>
 
-    <section>
+    <div class="projeto">
       <h2>Residência - Bairro Carmelo</h2>
-      <img src="galeria/projeto3.jpg" alt="Residência Bairro Carmelo">
-      <p>Automação de iluminação e controle inteligente para toda a residência.</p>
-    </section>
+      <img src="carmelo.jpg" alt="Casa Bairro Carmelo">
+      <p>Automação de iluminação em toda a casa, tomadas inteligentes, cortinas automáticas, ar-condicionado smart e interruptores inteligentes nos banheiros.</p>
+    </div>
 
-    <section>
-      <h2>Manutenção Painel de LED - RC Comercial</h2>
-      <img src="galeria/projeto4.jpg" alt="Manutenção Painel LED RC Comercial">
-      <p>Manutenção em painel de LED no comércio RC Comercial.</p>
-    </section>
-  </main>
+    <div class="projeto">
+      <h2>Manutenção em Painel de LED - RC Comercial</h2>
+      <img src="rccomercial.jpg" alt="Painel LED RC Comercial">
+      <p>Serviço corretivo em painel de LED e instalação de medidor de energia para controle de consumo no estabelecimento.</p>
+    </div>
+  </div>
 
 </body>
 </html>

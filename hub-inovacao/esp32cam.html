@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HELP Inovação | ESP32-CAM — Projetos Benjamin Versiani</title>
+<meta name="description" content="Roteiros das demandas 3 e 4: controle de acesso e monitoramento de EPIs com ESP32-CAM.">
+<style>
+:root{--bg:#071423;--panel:#13283d;--line:#33536b;--txt:#eaf5ff;--mut:#a8c0d5;--green:#54dfcb;--orange:#ffc16b}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#071423,#102940);color:var(--txt);font:15px/1.58 system-ui,Segoe UI,Arial,sans-serif}a{color:var(--green)}header{border-bottom:1px solid var(--line);padding:24px max(16px,calc((100vw - 1080px)/2))}main{max-width:1080px;margin:auto;padding:22px 17px 50px}h1{font-size:clamp(25px,4vw,40px);line-height:1.18;margin:8px 0}h2{margin:0 0 10px;font-size:21px}h3{margin:0 0 8px;font-size:17px}p{margin:8px 0}.muted{color:var(--mut)}.small{font-size:13px}.card{border:1px solid var(--line);background:var(--panel);border-radius:15px;padding:20px;margin-bottom:15px}.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.chip{display:inline-block;background:#21465a;color:#baf6e9;border:1px solid #37736f;border-radius:50px;padding:4px 10px;font-size:12px;font-weight:700}.warn{border-left:4px solid var(--orange);padding:12px 15px;background:#3a2c20;color:#fff0d3;border-radius:7px}.btn{display:inline-block;background:var(--green);border:0;color:#00292c;padding:10px 15px;font-weight:800;border-radius:9px;text-decoration:none;cursor:pointer;margin:4px 5px 4px 0}.secondary{background:#25465b;color:white}.stages{display:grid;gap:12px}.stage{background:#0c2134;border:1px solid var(--line);border-radius:10px;padding:15px}.stage label{display:flex;align-items:center;gap:10px;font-weight:750}.stage input{width:19px;height:19px;accent-color:var(--green)}.stage p{padding-left:29px;color:var(--mut)}code{background:#0a1827;padding:2px 6px;border-radius:5px}ol,ul{padding-left:23px}li{margin:5px 0}table{border-collapse:collapse;width:100%}td,th{padding:10px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--green)}.progress{height:12px;background:#29445b;border-radius:14px;overflow:hidden}.progress>div{height:100%;width:0;background:var(--green);transition:width .25s}footer{text-align:center;color:var(--mut);padding:24px 15px;border-top:1px solid var(--line)}@media(max-width:700px){.cols{grid-template-columns:1fr}.card{padding:15px}}@media print{body{background:white;color:black}.card,.stage{background:white;color:black;border:1px solid #999}.muted,.stage p{color:#444}.btn{display:none}}
+</style></head><body>
+<header><strong>HELP <span style="color:var(--green)">Inovação</span> | Benjamin Versiani</strong><p class="muted">Roteiro técnico de desenvolvimento com ESP32-CAM • Demandas industriais SAGA 13522 e 13521</p></header>
+<main><a href="./">← Voltar ao Hub</a><h1>ESP32-CAM: da demanda industrial ao protótipo</h1>
+<p>Guia de pesquisa, montagem, integração e testes para duas equipes. Os projetos devem ser executados em bancada ou simulação, com supervisão do instrutor e respeito às regras de segurança e privacidade.</p>
+<div class="warn"><strong>Atenção:</strong> este é um roteiro didático, não um sistema de segurança certificado. Não usar reconhecimento facial como autorização de acesso, nem desligar intertravamentos ou substituir proteções de máquinas. Não publicar imagens de trabalhadores ou colegas sem autorização.</div>
+<div class="cols">
+<section class="card"><span class="chip">Equipe 1 • Demanda nº 3</span><h2>Controle Inteligente de Acesso a Zonas Classificadas</h2><p><strong>SAGA:</strong> 13522</p><p><strong>Problema:</strong> identificar presença em área restrita, verificar autorização por credencial e registrar acesso indevido.</p>
+<ul><li>ESP32-CAM captura imagem e evento de presença.</li><li>Credencial independente (RFID, botão de autorização didático ou identificação definida no projeto).</li><li>Controlador decide se o evento é autorizado, gera alarme e registra data/hora.</li><li>IHM/web apresenta estado, alarmes e histórico.</li></ul>
+<p><strong>Teste mínimo:</strong> simular acesso autorizado, não autorizado, perda de câmera e perda de rede; definir o comportamento seguro sem depender apenas da imagem.</p>
+<a href="https://plataforma.gpinovacao.senai.br/plataforma/demandas-da-industria/interna/13522" target="_blank" rel="noopener noreferrer">Consultar demanda no SAGA</a></section>
+<section class="card"><span class="chip">Equipe 2 • Demanda nº 4</span><h2>Monitoramento e Controle da Utilização de EPIs</h2><p><strong>SAGA:</strong> 13521</p><p><strong>Problema:</strong> auxiliar a identificação de ausência ou utilização inadequada dos EPIs previstos para a atividade.</p>
+<ul><li>ESP32-CAM fornece quadros de imagem ao computador.</li><li>Visão computacional analisa EPIs selecionados, como capacete ou colete.</li><li>Sistema registra resultado como conforme, não conforme ou incerto.</li><li>IHM/web exibe alerta e solicita verificação humana.</li></ul>
+<p><strong>Teste mínimo:</strong> comparar cenários com e sem EPI, diferentes distâncias e iluminação, avaliando falsos positivos e falsos negativos.</p>
+<a href="https://plataforma.gpinovacao.senai.br/plataforma/demandas-da-industria/interna/13521" target="_blank" rel="noopener noreferrer">Consultar demanda no SAGA</a></section>
+</div>
+<section class="card"><h2>Montagem elétrica e comunicação</h2>
+<table><thead><tr><th>Item</th><th>Orientação de bancada</th></tr></thead><tbody>
+<tr><td>ESP32-CAM (verificar modelo)</td><td>Confirmar pinagem e tensão da placa. Na AI-Thinker usual, o pino 5V recebe alimentação regulada de 5 V; GPIOs são de 3,3 V e não devem receber 5 V diretamente.</td></tr>
+<tr><td>Alimentação</td><td>Utilizar fonte regulada estável e com corrente suficiente. Não alimentar a câmera por uma saída fraca do adaptador USB-serial.</td></tr>
+<tr><td>Gravação</td><td>Adaptador USB-UART com níveis lógicos 3,3 V, TX↔RX e GND comum. Para modo de gravação da AI-Thinker, GPIO0 em GND durante o reset; remover depois para execução.</td></tr>
+<tr><td>Wi-Fi</td><td>Conectar em rede didática autorizada. Não colocar credenciais reais em repositórios públicos.</td></tr>
+<tr><td>CLP / IHM</td><td>Integração via gateway ou serviço local, usando protocolo escolhido no projeto. Não conectar pinos GPIO diretamente a entradas industriais de 24 V.</td></tr>
+<tr><td>Alarmes</td><td>Usar LED, buzzer e tela de bancada; cargas devem ser acionadas por interface apropriada.</td></tr></tbody></table>
+<p class="muted small">A pinagem varia conforme o módulo ESP32-CAM. Validar no datasheet do modelo presente antes de energizar.</p></section>
+<section class="card"><h2>Sequência de desenvolvimento</h2><ol>
+<li>Identificar placa, câmera e alimentação; confirmar funcionamento e programação.</li>
+<li>Carregar exemplo de câmera do Arduino-ESP32 ou firmware equivalente compatível com o modelo.</li>
+<li>Verificar captura, latência e estabilidade da transmissão na rede de laboratório.</li>
+<li>Implementar detecção simples no PC e registrar eventos com data/hora; não é obrigatório executar IA na própria ESP32-CAM.</li>
+<li>Para acesso: acrescentar credencial e lógica de autorização independente. Para EPIs: treinar/avaliar detecção usando imagens autorizadas.</li>
+<li>Implementar supervisão de falhas de energia, rede, câmera, comunicação e resultado incerto.</li>
+<li>Criar painel de status e realizar ensaios de aceitação e apresentação do protótipo.</li>
+</ol>
+<p class="muted">Referências técnicas: <a href="https://github.com/espressif/arduino-esp32/tree/master/libraries/ESP32/examples/Camera/CameraWebServer" target="_blank" rel="noopener noreferrer">exemplo CameraWebServer</a> e <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/" target="_blank" rel="noopener noreferrer">documentação Arduino-ESP32</a>. O exemplo deve ser adaptado à placa correta.</p></section>
+<section class="card"><h2>Oito marcos do projeto</h2><p class="muted">Marque os itens concluídos neste navegador para organizar sua execução. Isto é um checklist local, não uma entrega oficial ao instrutor.</p><div class="progress" role="progressbar" aria-label="Progresso do roteiro"><div id="bar"></div></div><p id="counter">0 de 8 marcos concluídos</p>
+<div class="stages" id="stages">
+<div class="stage"><label><input type="checkbox">1. Problema e contexto</label><p>Entregar mapa do processo, impacto, envolvidos, cenário de risco e evidências do problema.</p></div>
+<div class="stage"><label><input type="checkbox">2. Pesquisa e benchmarking</label><p>Comparar alternativas: sensores, câmeras, RFID, CLP, soluções de IA e custos.</p></div>
+<div class="stage"><label><input type="checkbox">3. Requisitos e riscos</label><p>Definir requisitos, proteção de dados, permissivos, alarmes e critérios objetivos de sucesso.</p></div>
+<div class="stage"><label><input type="checkbox">4. Concepção da solução</label><p>Produzir diagrama elétrico de bancada, arquitetura de rede, fluxograma e lista de materiais.</p></div>
+<div class="stage"><label><input type="checkbox">5. Protótipo ou simulação</label><p>Demonstrar captura ESP32-CAM, processamento e evento/alarme funcionando.</p></div>
+<div class="stage"><label><input type="checkbox">6. Testes e validação</label><p>Registrar cenários, falhas, resultados, tempo de resposta e limitações encontradas.</p></div>
+<div class="stage"><label><input type="checkbox">7. Viabilidade e benefícios</label><p>Estimativa de materiais, implantação, operação, manutenção, limitações e riscos remanescentes.</p></div>
+<div class="stage"><label><input type="checkbox">8. Apresentação final</label><p>Apresentar protótipo, relatório, evidências autorizadas e próximos passos.</p></div>
+</div><button class="btn" id="print">Imprimir roteiro</button><button class="btn secondary" id="reset">Limpar checklist local</button>
+</section>
+<section class="card"><h2>Critérios de avaliação sugeridos</h2><table><tr><th>Critério</th><th>Peso</th></tr><tr><td>Diagnóstico e definição dos requisitos</td><td>20%</td></tr><tr><td>Arquitetura e segurança</td><td>20%</td></tr><tr><td>Protótipo funcional</td><td>30%</td></tr><tr><td>Testes documentados e limites</td><td>20%</td></tr><tr><td>Apresentação e documentação</td><td>10%</td></tr></table><p class="muted small">Distribuição didática sugerida; não substitui o plano de avaliação oficial do SENAI.</p></section>
+</main><footer>HELP Automação e Serviços • Material educacional independente • Os registros do SAGA devem ser conferidos na plataforma oficial.</footer>
+<script>
+(function(){const key='help_esp32cam_marcos_v1';const checks=[...document.querySelectorAll('#stages input')];try{let x=JSON.parse(localStorage.getItem(key)||'[]');checks.forEach((v,i)=>v.checked=!!x[i])}catch(e){}function update(){let n=checks.filter(x=>x.checked).length;document.getElementById('bar').style.width=(n/8*100)+'%';document.getElementById('counter').textContent=n+' de 8 marcos concluídos';try{localStorage.setItem(key,JSON.stringify(checks.map(x=>x.checked)))}catch(e){}}checks.forEach(x=>x.addEventListener('change',update));document.getElementById('print').onclick=()=>window.print();document.getElementById('reset').onclick=()=>{if(confirm('Limpar o checklist apenas deste navegador?')){checks.forEach(x=>x.checked=false);update()}};update()})();
+</script></body></html>
